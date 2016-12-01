@@ -2,6 +2,13 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
+  if File.exist? ".vagrant/machines/default/virtualbox/creator_uid"
+        File.delete ".vagrant/machines/default/virtualbox/creator_uid"
+  end
+#  if Vagrant::Util::Platform.windows?
+#  elsif Vagrant::Util::Platform.linux?
+#  end
+
   config.vm.box = "debian/jessie64"
   config.vm.box_check_update = false
 
