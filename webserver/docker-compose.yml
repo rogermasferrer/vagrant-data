@@ -1,0 +1,9 @@
+services:
+    web:
+        build:
+        context: ./
+        dockerfile: Dockerfile_web
+        args:
+            builddns: 1
+        container_name: apache
+
